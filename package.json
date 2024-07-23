@@ -1,5 +1,5 @@
 {
-  "name": "Great-Frontend-Projects",
+  "name": "great-frontend-projects",
   "private": true,
   "scripts": {
     "build": "turbo build",
