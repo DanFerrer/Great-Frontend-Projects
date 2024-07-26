@@ -1,0 +1,28 @@
+---
+interface Props {
+	fullName: string;
+	userName: string;
+	imgSrc: string;
+  altText: string;
+  blockQuoteText: string;
+}
+
+const { fullName, userName, altText, imgSrc, blockQuoteText } = Astro.props;
+---
+
+<main class="font-noto-sans min-h-screen flex justify-center items-start pt-48 px-4 md:min-h-[1024px] lg:min-h-[768px]">
+  <figure class="bg-white p-6 flex flex-col gap-4 shadow-md rounded-lg w-[340px] text-base leading-6">
+    <figcaption class="flex gap-4 items-center">
+      <img src={imgSrc}  alt={altText} class="w-12 h-12 rounded-full">
+      <div class="flex flex-col gap-1">
+        <div class="font-semibold text-lg leading-7 text-gray-900">{fullName}</div>
+        <div class="font-normal text-sm leading-5">{userName}</div>
+      </div>
+    </figcaption>
+    <blockquote>
+      <p>
+        {blockQuoteText}
+      </p>
+    </blockquote>
+  </figure>
+</main>
